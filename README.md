@@ -87,3 +87,96 @@ hospital-management-system/
 ├── dashboard/
 ├── frontend/
 └── README.md
+git clone https://github.com/yourusername/hospital-management-system.git
+cd hospital-management-system
+cd Backend
+npm install
+cd ../frontend
+npm install
+cd ../dashboard
+npm install
+MONGO_URI=your_mongodb_uri
+
+JWT_SECRET_KEY=your_secret_key
+JWT_EXPIRES=7d
+COOKIE_EXPIRE=7
+
+PORT=4000
+
+FRONTEND_URL=http://localhost:5173
+DASHBOARD_URL=http://localhost:5174
+
+CLOUDINARY_CLOUD_NAME=your_cloud_name
+CLOUDINARY_API_KEY=your_api_key
+CLOUDINARY_API_SECRET=your_api_secret
+
+| Method | Endpoint            | Description      |
+| ------ | ------------------- | ---------------- |
+| POST   | `/patient/register` | Register Patient |
+| POST   | `/login`            | User Login       |
+| POST   | `/admin/addnew`     | Add Admin        |
+| POST   | `/doctor/addnew`    | Add Doctor       |
+| GET    | `/doctors`          | Get Doctors      |
+
+| Method | Endpoint      | Description          |
+| ------ | ------------- | -------------------- |
+| POST   | `/post`       | Book Appointment     |
+| GET    | `/getall`     | Get All Appointments |
+| PUT    | `/update/:id` | Update Appointment   |
+| DELETE | `/delete/:id` | Delete Appointment   |
+
+| Method | Endpoint  | Description  |
+| ------ | --------- | ------------ |
+| POST   | `/send`   | Send Message |
+| GET    | `/getall` | Get Messages |
+
+Authentication & Authorization
+JWT Authentication
+HTTP-only Cookies
+bcrypt Password Hashing
+Role-based Access
+
+cd Backend
+npm run dev
+cd frontend
+npm run dev
+cd dashboard
+npm run dev
+
+Admin
+Manage Doctors
+Manage Appointments
+Manage Admins
+Read Messages
+👤 Patient
+Register/Login
+Book Appointments
+Browse Departments
+Send Messages
+👨‍⚕️ Doctor
+Managed by Admin
+
+### Patient Portal
+![Home](screenshots/home.png)
+
+### Admin Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+git checkout -b feature-name
+git commit -m "Add feature"
+git push origin feature-name
+
+Known Issues
+Validation inconsistencies
+Limited error handling
+Cloudinary duplicate config issue
+
+Future Enhancements
+Real-time Notifications
+Payment Gateway
+Video Consultation
+Mobile App
+Analytics Dashboard
+Dark Mode
+
+MongoNetworkError
